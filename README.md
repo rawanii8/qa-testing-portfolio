@@ -1,69 +1,163 @@
 # QA Testing Portfolio
 
-A collection of hands-on Software Quality Assurance and Testing work across real-world web and mobile applications — active, in-development products, not sample or practice exercises.
+A collection of hands-on **Software Quality Assurance and Testing work** across real-world web and mobile applications.
 
-**Note on project names:** Project names below are generalized rather than using real company/product names or client-identifying details, to respect confidentiality of the platforms tested.
+This portfolio demonstrates practical experience in **manual testing, API testing, test design, Arabic localization/RTL validation, structured defect reporting, and end-to-end defect lifecycle management**.
 
-This portfolio demonstrates:
-- Manual testing across web and mobile platforms
-- API testing (Postman)
-- Functional, regression, and exploratory testing
-- Arabic localization/RTL testing
-- Structured defect reporting and full defect lifecycle management
-- Test design using Boundary Value Analysis (BVA) and Equivalence Partitioning (EP)
+> **Note on Project Names:** Project names have been generalized to protect company, product, and client confidentiality. The testing activities and QA work represented are based on real-world testing experience.
+
+---
 
 ## Projects
 
 ### [Agricultural Management Platform](./agri-management-platform)
-Agricultural/farm management system — iOS mobile app and web portal, Arabic-first interface.
-**Testing:** Functional, regression, exploratory, Arabic localization/RTL, UI/UX, data integrity, security-related validation, cross-platform testing.
+
+Agricultural management system consisting of an iOS mobile application and web portal with an Arabic-first interface.
+
+**Testing Areas:**
+- Functional Testing
+- Regression Testing
+- Exploratory Testing
+- Arabic Localization & RTL
+- UI/UX Validation
+- Data Integrity Validation
+- Security-Related Validation
+- Cross-Platform Testing
+
+---
 
 ### [Workforce Management Portal](./workforce-management-portal)
+
 Workforce management web platform covering attendance, tasks, leaves, communication, meetings, reports, and project management.
-**Testing:** Functional, regression, exploratory, Arabic localization/RTL, session validation, data-isolation validation, permission/access validation, UI/UX, cross-browser.
+
+**Testing Areas:**
+- Functional Testing
+- Regression Testing
+- Exploratory Testing
+- Arabic Localization & RTL
+- Session Validation
+- Data-Isolation Validation
+- Permission & Access-Control Validation
+- UI/UX Testing
+- Cross-Browser Testing
+
+**Key Defect Areas:**
+- Functional workflow issues
+- Session-related issues
+- Data-isolation problems
+- Permission and access-control issues
+- Arabic localization and RTL inconsistencies
+
+---
 
 ### [Workforce Management Platform — Public Site](./workforce-management-public-site)
-Public-facing marketing and pricing website for the platform above.
-**Testing:** Functional testing, Arabic localization, RTL, navigation, buttons, links, page transitions, UI consistency.
+
+Public-facing marketing and pricing website associated with the workforce management platform.
+
+**Testing Areas:**
+- Functional Testing
+- Arabic Localization
+- RTL Validation
+- Navigation Testing
+- Button & Link Validation
+- Page Transition Testing
+- UI Consistency
+
+---
 
 ### [Government Field-Task Management System](./government-task-app)
-Government mobile application for field-task / process-server workflow management.
-**Mobile Testing:** Functional, validation, negative testing, UI behavior, user workflows.
-**API Testing:** Postman — REST API validation, authentication, request/response validation, HTTP status codes, input validation, negative/edge cases, endpoint debugging, error handling.
 
-## My QA Approach
+Government mobile application supporting field-task and process-server workflows.
 
-**Understand → Design → Execute → Report → Retest → Verify**
+#### Mobile Testing
 
-- Understand requirements and expected behavior before testing begins.
-- Identify positive, negative, boundary, and edge cases.
-- Execute functional and exploratory testing across the target platform.
-- Report defects with clear reproduction steps and supporting evidence.
-- Collaborate during triage to clarify root cause and expected fix.
+- Functional Testing
+- Validation Testing
+- Negative Testing
+- UI Behavior
+- User Workflow Testing
+
+#### API Testing
+
+**Postman**
+- REST API Validation
+- Authentication Testing
+- Request & Response Validation
+- HTTP Status Code Validation
+- Header Validation
+- Input Validation
+- Negative & Edge-Case Testing
+- Endpoint Debugging
+- Backend Error-Handling Validation
+
+---
+
+## QA Approach
+
+### Understand → Design → Execute → Report → Retest → Verify
+
+My testing approach focuses on understanding expected behavior, identifying meaningful test scenarios, executing tests systematically, and providing clear feedback throughout the defect lifecycle.
+
+- Understand requirements and expected behavior.
+- Identify positive, negative, boundary, and edge-case scenarios.
+- Design and execute relevant test cases.
+- Perform functional and exploratory testing across the target platform.
+- Document defects with clear reproduction steps and supporting evidence.
+- Participate in defect triage and clarification.
 - Retest fixes and perform regression checks on related areas.
-- Verify closure before marking a defect resolved.
+- Verify resolved defects before closure.
+
+---
+
+## Test Design Techniques
+
+I apply structured test design techniques to improve test coverage and identify edge cases, including:
+
+- **Boundary Value Analysis (BVA)**
+- **Equivalence Partitioning (EP)**
+- Positive & Negative Testing
+- Boundary & Edge-Case Testing
+- Validation Testing
+- End-to-End Workflow Testing
+
+---
 
 ## Bug Reporting
 
-Each defect is documented with a consistent structure:
+Defects are documented using a consistent and developer-friendly structure:
 
 - **Bug ID**
 - **Title**
 - **Severity**
 - **Priority**
 - **Description**
-- **Preconditions** (where applicable)
+- **Preconditions** — where applicable
 - **Steps to Reproduce**
 - **Actual Result**
 - **Expected Result**
 - **Environment**
-- **Evidence** (where applicable)
+- **Evidence** — where applicable
 
-**Defect lifecycle:** Discovery → Documentation → Triage → Fix Verification → Retesting → Closure
+### Defect Lifecycle
 
-## Security-Related Wording
+**Discovery → Documentation → Triage → Fix Verification → Retesting → Regression → Closure**
 
-Testing described in this portfolio refers to **security-related validation** performed as part of standard QA activity — such as session validation, permission/access-control validation, and authentication testing. This is not penetration testing, vulnerability assessment, or advanced security/cybersecurity testing.
+The goal is to provide defects that are **clear, reproducible, actionable, and easy to verify**.
+
+---
+
+## Security-Related Validation
+
+Security-related testing documented in this portfolio refers to validation performed as part of standard QA activities, including:
+
+- Authentication testing
+- Session validation
+- Permission and access-control validation
+- Data-isolation validation
+
+This portfolio does **not** represent penetration testing, vulnerability assessment, or advanced cybersecurity testing.
+
+---
 
 ## Tools
 
@@ -71,22 +165,21 @@ Testing described in this portfolio refers to **security-related validation** pe
 |---|---|
 | Bug Tracking | Jira, Trello, Zephyr Scale |
 | API Testing | Postman |
+| Test Design | BVA, EP |
 | Version Control | Git, GitHub |
 | Database | SQL |
-| Automation (in progress) | Selenium WebDriver |
+| Automation | Selenium WebDriver — currently learning |
 | Documentation | Excel, Google Sheets |
+
+---
 
 ## Repository Structure
 
-```
+```text
 project/
 ├── README.md
 └── bug-reports/
     ├── BUG-001.md
     ├── BUG-002.md
+    ├── BUG-003.md
     └── ...
-```
-
-Each project's `README.md` covers its scope, modules/features tested, testing types, defect categories, and key findings. The `bug-reports/` folder contains a representative, sanitized sample of documented defects — not the complete internal log, and with any client-identifying or system-sensitive details removed or generalized.
-
-**Note:** Full bug logs are maintained privately in structured spreadsheets and are available on request. They are not published here.
