@@ -1,28 +1,159 @@
-# Government Field-Task Management System — Mobile App Testing
+# Government Field-Task Management System — QA Testing
 
-**Platform:** Mobile application (government field-task / process-server workflow system)
-**Testing scope:** Manual functional testing and API testing
+**Platform:** Mobile Application  
+**Domain:** Government Field-Task / Process-Server Workflow  
+**Testing Scope:** Manual Functional Testing & REST API Testing
 
-## Categories Covered
+Hands-on QA testing performed on a government mobile application supporting field-task and process-server workflows. Testing covered functional workflows, input validation, offline behavior, localization, UI/UX, authentication-related flows, and backend API validation.
 
-- **Authentication / Session-Related Validation** — password-change flow validation gaps
-- **Functional** — offline map download handling, search not triggering on single-character input, lost photo attachment on navigation, progress bar step counter shown in reversed order
-- **Validation** — unrestricted input on identity fields and date fields accepting past dates
-- **Localization** — task status badge left in English during Offline Mode
-- **UI/UX** — missing required-field indicators, low-contrast active navigation state, inconsistent icon states, missing month names in date picker
+---
 
-## Manual Testing
+## Testing Areas
 
-Performed functional testing on the mobile application, documenting defects with a bug report format adapted for a mobile-only app. Bug reports followed the same structure used across other projects: Description, Preconditions (where relevant), Steps to Reproduce, Actual Result, Expected Result, Environment.
+### Authentication & Session Validation
 
-## API Testing (Postman)
+- Authentication flow validation
+- Password-change workflow validation
+- Session-related behavior
+- Negative authentication scenarios
 
-Tested backend REST endpoints supporting the mobile app using Postman — covering functional, validation, authentication, error-handling, and negative testing across login, task management, lookups, status updates, and location history endpoints.
+### Functional Testing
 
-Key findings included a task update endpoint failing due to a request sending task IDs as integers instead of the strings the API expected, along with several validation gaps and unhandled backend exceptions surfaced through negative testing.
+- Offline map download behavior
+- Search functionality and input handling
+- Photo attachment persistence during navigation
+- Progress indicator and step-counter behavior
+- Task workflow validation
 
-See [`api-testing.md`](./api-testing.md) for the full API test report.
+### Input Validation
+
+- Identity field input validation
+- Date field validation
+- Negative and boundary scenarios
+- Required-field validation
+
+### Localization
+
+- Arabic localization
+- RTL behavior
+- Offline-mode localization
+- Task status and UI text consistency
+
+### UI/UX
+
+- Required-field indicators
+- Navigation state visibility
+- Icon state consistency
+- Date-picker behavior
+- Visual contrast and usability
+
+---
+
+## Manual Mobile Testing
+
+Manual testing was performed across key mobile workflows using functional, negative, validation, exploratory, and UI/UX testing approaches.
+
+Defects were documented using a consistent structure adapted for mobile testing:
+
+- Description
+- Preconditions — where applicable
+- Steps to Reproduce
+- Actual Result
+- Expected Result
+- Environment
+- Evidence — where applicable
+
+Testing focused on identifying functional defects, validation gaps, usability issues, localization inconsistencies, and unexpected behavior across user workflows.
+
+---
+
+## API Testing — Postman
+
+The backend REST APIs supporting the mobile application were tested using **Postman**.
+
+### API Testing Coverage
+
+- Authentication
+- Task Management
+- Lookup Data
+- Task Status Updates
+- Location History
+- Request & Response Validation
+- HTTP Status Code Validation
+- Header Validation
+- Input Validation
+- Negative & Edge-Case Testing
+- Error-Handling Validation
+- Backend Exception Handling
+
+### Key Findings
+
+API testing identified issues including:
+
+- Request data-type mismatches between client payloads and backend expectations.
+- Input validation gaps.
+- Unexpected behavior under invalid or incomplete requests.
+- Unhandled backend exceptions exposed during negative testing.
+- Inconsistent API error handling and validation responses.
+
+The detailed API testing report is available in [`api-testing.md`](./api-testing.md).
+
+---
+
+## API Testing Approach
+
+The API testing process included:
+
+**Request Design → Positive Testing → Negative Testing → Validation → Response Analysis → Defect Reporting → Retesting**
+
+Tests covered both expected successful requests and intentionally invalid or incomplete inputs to evaluate backend validation and error handling.
+
+---
 
 ## Sample Bug Reports
 
-See [`bug-reports/`](./bug-reports) for a representative sample of documented defects. A small number of higher-sensitivity findings (e.g., a critical authentication issue that was reported and remediated) are intentionally excluded from this public sample and summarized only at a high level, without reproduction detail, out of caution given the nature of this system.
+The [`bug-reports/`](./bug-reports) directory contains a representative and sanitized selection of documented defects.
+
+Reports follow a consistent structure including:
+
+- Bug ID
+- Title
+- Severity
+- Priority
+- Description
+- Preconditions
+- Steps to Reproduce
+- Actual Result
+- Expected Result
+- Environment
+- Evidence
+
+---
+
+## Sensitive Findings
+
+Due to the nature of the system, certain security-sensitive findings are **intentionally excluded from the public repository**.
+
+Only high-level descriptions are provided where necessary, without reproduction steps, payloads, credentials, internal URLs, identifiers, or other information that could expose the system or its users.
+
+This repository is intended to demonstrate **QA methodology and testing experience**, not to disclose confidential system or security information.
+
+---
+
+## Confidentiality
+
+Project and product names have been generalized to protect confidentiality.
+
+The public repository contains only **sanitized and representative testing artifacts**.
+
+The following are not included:
+
+- Internal URLs
+- Credentials or tokens
+- User or customer data
+- Internal IDs
+- API secrets
+- Sensitive system information
+- Detailed security-sensitive reproduction steps
+
+The detailed internal testing records are maintained privately and are not published publicly.
